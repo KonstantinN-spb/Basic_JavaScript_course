@@ -23,25 +23,25 @@ alert(b);                    // 3  ----- в начале равно 1, а пос
 var a = 2;
 var x = 1 + (a *= 2);
 
-a *= 2 Это сокращенная запись просвоения a=a*2, соответсвенно в скобках получаем 2*2=4  и прибавляем +1.
-Ответ x=5
+        a *= 2 Это сокращенная запись просвоения a=a*2, соответсвенно в скобках получаем 2*2=4  и прибавляем +1.
+        Ответ x=5
 
 3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
 если a и b положительные, вывести их разность;
 если а и b отрицательные, вывести их произведение;
 если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом. ### 
-*/
 
-/*
+
+
 let a = +prompt("Введите отрицательное или положительное первое число");
 let b = +prompt("Введите отрицательное или положительное второе число");
 
 function calculate() {
     
     if (a>=0 && b>=0) {
-        let plus = parseInt (a-b);
-        console.log (plus + " a и b положительные, вывести их разность");
-        alert (plus + " a и b положительные, вывести их разность");
+        let minus = parseInt (a-b);
+        console.log (minus + " a и b положительные, вывести их разность");
+        alert (minus + " a и b положительные, вывести их разность");
     }
     else if(a<=0 && b<=0) {
         let multiplication = parseInt (a*b);
@@ -106,41 +106,36 @@ calculate();
 /*
 
 // 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return. ### 
-*/
-
-let a=+prompt("Введите первое число");
-let b=+prompt("Введите второе число");
-
-function calculate1() {
-    let sum = a+b;
-    alert("сумма чисел "+sum);
-    return;
-}
-function calculate2() {
-    let minus = a-b;
-    alert("разность чисел "+minus);
-    return;
-}
-function calculate3() {
-    let multiplication = a*b;
-    alert("произведение чисел "+multiplication);
-    return;
-}
-function calculate4() {
-    let division = a/b;
-    alert("частное чисел "+division);
-    return;
-}
-
-calculate1(a,b);
-calculate2(a,b);
-calculate3(a,b);
-calculate4(a,b);
 
 
+            let a=+prompt("Введите первое число");
+            let b=+prompt("Введите второе число");
 
+            function calculate1() {
+                let sum = a+b;
+                alert("сумма чисел "+sum);
+                return;
+            }
+            function calculate2() {
+                let minus = a-b;
+                alert("разность чисел "+minus);
+                return;
+            }
+            function calculate3() {
+                let multiplication = a*b;
+                alert("произведение чисел "+multiplication);
+                return;
+            }
+            function calculate4() {
+                let division = a/b;
+                alert("частное чисел "+division);
+                return;
+            }
 
-
+            calculate1(a,b);
+            calculate2(a,b);
+            calculate3(a,b);
+            calculate4(a,b);
 
 /*
 
@@ -148,10 +143,60 @@ calculate4(a,b);
 operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций 
 (использовать функции из пункта 3) и вернуть полученное значение (использовать switch). ### 
 
+*/
+
+/*
+
+let arg1=+prompt("Введите первое число");
+let arg2=+prompt("Введите второе число");
+let operation=prompt("какую математическую операцию нужно выполнить?")
+
+function mathOperation(arg1, arg2, operation){
+    let sum,minus,multiplication,division;
+
+    switch (operation){
+        case "+" :
+            sum = arg1+arg2;
+            console.log(sum);
+            alert(sum);
+            return;
+
+        case"-":
+            minus = arg1-arg2;
+            console.log(minus);
+            alert(minus);
+            return;
+
+        case "*" :
+            multiplication= arg1*arg2;
+            console.log(multiplication);
+            alert(multiplication);
+            return;
+        
+        case "/" :
+            division= arg1/arg2;
+            console.log(division);
+            alert(division);
+            return;
+
+    }
+}
+
+mathOperation(arg1,arg2,operation)
+
+
+
 7. *Сравнить null и 0. Попробуйте объяснить результат. ### 
+
+    alert( null > 0 );  // (1) false
+    alert( null == 0 ); // (2) false
+    alert( null >= 0 ); // (3) true
+
+Получается сравнение >= преобразует null в 0 и это tru, но false при попытке сравнять null с 0. 
+
+*/
 
 8. *С помощью рекурсии организовать функцию возведения числа в степень. 
 Формат: function power(val, pow), где val – заданное число, pow – степень.
 
-*/
 
