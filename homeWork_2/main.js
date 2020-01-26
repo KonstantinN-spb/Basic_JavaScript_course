@@ -174,7 +174,7 @@ mathOperation(arg1,arg2,operation)
 
 
 
-//7. *Сравнить null и 0. Попробуйте объяснить результат. ### 
+//7. *Сравнить null и 0. Попробуйте объяснить результат. 
 
     alert( null > 0 );  // (1) false
     alert( null == 0 ); // (2) false
