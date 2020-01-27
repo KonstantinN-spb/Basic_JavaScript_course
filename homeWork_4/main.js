@@ -15,13 +15,13 @@ function output(){
     console.log(mainNumber);
         let first, second, three;
         function divided (){
-          // случайное 3-значное число делим на 100 и получаем первую цифру
+          // случайное 3-значное число делим на 100 и получаем первую цифру.
           first = Math.floor(mainNumber/100);  
           console.log(first);
           // теперь из случайного числа вычитаем эту сотую часть, которую получили в прошлом пункте
           second = Math.floor((mainNumber-(first*100))/10);
           console.log(second);
-          // теперь просто из рандомного вычитаем сумму 1 и 2 чилас и получаем в отстаке 3-е число
+          // теперь просто из рандомного вычитаем сумму 1 и 2 числа и получаем в остатке 3-е число
           three = mainNumber-((first*100)+(second*10));
           console.log(three);  
         }
