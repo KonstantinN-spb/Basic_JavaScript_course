@@ -6,4 +6,23 @@
 body{
     background: grey;
 }
+.block {
+    width: 800px;
+    height: 100px;
+    display: flex;
+}
+.white{
+    background-color: azure;
+}
+.black{
+    background-color: black;
+}
 
+.container{
+    margin: 0 auto;
+    width: 800px;
+}
+.horizont {
+    width: 800px;
+    height: 100px;
+}
