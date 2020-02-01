@@ -4,11 +4,9 @@
     margin: 0;
 }
 body{
-    background: grey;
+    background: #293c23d1;
 }
 .block {
-    width: 800px;
-    height: 100px;
     display: flex;
 }
 .white{
@@ -20,9 +18,61 @@ body{
 
 .container{
     margin: 0 auto;
-    width: 800px;
+    width: 850px;
+    
+    height: 830px;
 }
 .horizont {
-    width: 800px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
     height: 100px;
+    color: #ffa600;
+}
+.letterName{
+    width: 800px;
+    height: 30px;
+    display: flex;
+    grid-row: 2;
+}
+
+.realletterName{
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.NumberName{
+    width: 30px;
+    height: 800px;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.realNumberName{
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.around{
+    display: grid;
+    grid-template-rows:  800px 30px; 
+    grid-template-columns: 30px 800px; 
+}
+
+.table{
+    grid-column: 2;
 }
