@@ -98,6 +98,8 @@ function posision(){
   }
 }
 
+
+
 include();
 double();
 alfaLine();
@@ -105,3 +107,11 @@ numberLine();
 posision();
 
 
+
+let changeColor = document.querySelector("#horizontID_11");
+
+changeColor.onclick = colorSquare();
+
+function colorSquare(){
+      changeColor.classList.add('green');
+}
