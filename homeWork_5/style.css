@@ -75,3 +75,6 @@ body{
 .green{
     background-color: green;
 }
+.none{
+    background-attachment: none;
+}

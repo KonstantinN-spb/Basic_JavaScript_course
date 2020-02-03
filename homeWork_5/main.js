@@ -17,23 +17,33 @@ function include(){
       }
   } 
 }
+
+let arrQvadro;
+
 function double(){
-  
+  arrQvadro = [];
   for(j=1; j<=8; j++){
     let parent = document.querySelector("#someID_"+j);
-
+    
     for(i=1; i<=8; i++) {
+       
       let two = document.createElement("div");
+      arrQvadro.push(two);
       parent.appendChild(two);
    
       two.className= "horizont" ;
       two.id = "horizontID_"+i+j;
+
+      console.log(arrQvadro);
+
         
         if(i%2 == j%2){
           two.classList.add('white');
+          
         }
         else {
           two.classList.add('black');
+          
         }
     }
    
@@ -100,6 +110,7 @@ function posision(){
 
 
 
+
 include();
 double();
 alfaLine();
@@ -108,10 +119,43 @@ posision();
 
 
 
-let changeColor = document.querySelector("#horizontID_11");
 
-changeColor.onclick = colorSquare();
-
-function colorSquare(){
-      changeColor.classList.add('green');
+for (var i = 0; i < arrQvadro.length; i++) {
+  arrQvadro[i].onclick = changeColor;
 }
+
+function changeColor(){
+  this.className = (this.className == 'horizont white' ? 'horizont green':'horizont white');
+  // this.className = (this.className == 'horizont black' ? 'horizont green':'horizont black')
+}
+
+
+// function changeColor(){
+//   if (this.className == 'white') { 
+//     this.classList.add = 'green';
+    
+//   }  
+//   else if (this.className ==  'green') {
+//     this.classList.add = 'white';
+//   }
+//    else {
+//    this.className = 'horizont white';
+//   }
+
+// }
+
+// document.querySelector("#horizontID_11").addEventListener("click", change); 
+
+// function change(){
+//   changeColor.style.backgroundColor = 'green';
+// }
+
+
+// document.querySelector("#horizontID_11").onclick = function() {
+//   document.querySelector('.horizont').classList.add('green');
+// }
+
+// document.querySelector("#horizontID_11").onclick = function(){this.className = (this.className == 'horizont white' ? 'horizont green':'horizont white')}
+
+
+// const  changeColor = document.querySelectorAll(".horizont");
