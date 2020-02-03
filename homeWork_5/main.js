@@ -1,4 +1,4 @@
-
+let arrQvadro;
 
 function include(){
   for(i=1; i<=8; i++){
@@ -17,11 +17,9 @@ function include(){
       }
   } 
 }
-
-let arrQvadro;
-
 function double(){
   arrQvadro = [];
+
   for(j=1; j<=8; j++){
     let parent = document.querySelector("#someID_"+j);
     
@@ -36,17 +34,14 @@ function double(){
 
       console.log(arrQvadro);
 
-        
-        if(i%2 == j%2){
+      if(i%2 == j%2){
           two.classList.add('white');
-          
-        }
-        else {
+      }
+      else {
           two.classList.add('black');
           
-        }
+      }
     }
-   
   } 
 }
 function alfaLine() {
@@ -71,8 +66,7 @@ function alfaLine() {
       
       
     }
-   
-  
+
 }
 function numberLine() {
 
@@ -108,9 +102,6 @@ function posision(){
   }
 }
 
-
-
-
 include();
 double();
 alfaLine();
@@ -118,44 +109,111 @@ numberLine();
 posision();
 
 
-
-
-for (var i = 0; i < arrQvadro.length; i++) {
-  arrQvadro[i].onclick = changeColor;
-}
-
-function changeColor(){
-  this.className = (this.className == 'horizont white' ? 'horizont green':'horizont white');
-  // this.className = (this.className == 'horizont black' ? 'horizont green':'horizont black')
-}
-
-
-// function changeColor(){
-//   if (this.className == 'white') { 
-//     this.classList.add = 'green';
+for (let i = 0; i < arrQvadro.length; i++) {
     
-//   }  
-//   else if (this.className ==  'green') {
-//     this.classList.add = 'white';
-//   }
-//    else {
-//    this.className = 'horizont white';
-//   }
+for(i=i;i<8;i++) {
+    if (i%2 == 0){
+        arrQvadro[i].onclick = changeColorWhite;
+    }
+    else{
+        arrQvadro[i].onclick = changeColorBlack;
+      } 
+    } 
+  for(i=i;i<16;i++) {
+      if (i%2 == 0){
+        arrQvadro[i].onclick = changeColorBlack;
+      }
+      else{
+        arrQvadro[i].onclick = changeColorWhite;
+       } 
+    }
+  for(i=i;i<24;i++) {
+        if (i%2 == 0){
+          arrQvadro[i].onclick = changeColorWhite;
+      }
+      else{
+        arrQvadro[i].onclick = changeColorBlack;
+        } 
 
-// }
+    }
+  for(i=i;i<32;i++) {
+        if (i%2 == 0){
+            arrQvadro[i].onclick = changeColorBlack;
+        }
+          else{
+          arrQvadro[i].onclick = changeColorWhite;
+           }  
+           
+    }
+  for(i=i;i<40;i++) {
+            if (i%2 == 0){
+              arrQvadro[i].onclick = changeColorWhite;
+          }
+            else{
+            arrQvadro[i].onclick = changeColorBlack;
+             }  
+             
+    }
+  for(i=i;i<48;i++) {
+      if (i%2 == 0){
+          arrQvadro[i].onclick = changeColorBlack;
+      }
+      else{
+          arrQvadro[i].onclick = changeColorWhite;
+      }  
+               
+    }
+  for(i=i;i<56;i++) {
+      if (i%2 == 0){
+            arrQvadro[i].onclick = changeColorWhite;
+      }
+      else{
+            arrQvadro[i].onclick = changeColorBlack;
+          }  
+                 
+    }
+  for(i=i;i<64;i++) {
+      if (i%2 == 0){
+            arrQvadro[i].onclick = changeColorBlack;
+      }
+      else{
+            arrQvadro[i].onclick = changeColorWhite;
+      }  
+                   
+    }              
+}
 
-// document.querySelector("#horizontID_11").addEventListener("click", change); 
+function changeColorWhite(){
+  this.className = (this.className == 'horizont white' ? 'horizont green':'horizont white');
 
-// function change(){
-//   changeColor.style.backgroundColor = 'green';
-// }
-
-
-// document.querySelector("#horizontID_11").onclick = function() {
-//   document.querySelector('.horizont').classList.add('green');
-// }
-
-// document.querySelector("#horizontID_11").onclick = function(){this.className = (this.className == 'horizont white' ? 'horizont green':'horizont white')}
+}
+function changeColorBlack(){
+  this.className = (this.className == 'horizont black' ? 'horizont green':'horizont black');
+}
 
 
-// const  changeColor = document.querySelectorAll(".horizont");
+
+
+
+// outLetter.forEach(item =>{item.onclick = changeColorOut});
+// outLetter.onclick = changeColorOut;
+
+let outLetter = document.querySelectorAll(".letterName")
+
+for (let i = 0; i < outLetter.length; i++) {
+  outLetter[i].onclick = changeColorOut;
+}
+function changeColorOut(){
+  this.className = (this.className == 'letterName' ? 'letterName red':'letterName');
+}
+
+
+let outNumber = document.querySelectorAll(".NumberName")
+
+for (let i = 0; i < outNumber.length; i++) {
+  outNumber[i].onclick = changeColorOutNumb;
+}
+
+function changeColorOutNumb(){
+  this.className = (this.className == 'NumberName' ? 'NumberName red':'NumberName');
+}

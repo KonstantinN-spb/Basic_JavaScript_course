@@ -18,8 +18,8 @@ body{
 .container{
     margin: 0 auto;
     width: 850px;
-    
     height: 830px;
+    
 }
 .horizont {
     font-size: 20px;
@@ -73,8 +73,11 @@ body{
     grid-column: 2;
 }
 .green{
-    background-color: green;
+    background: green;
 }
 .none{
     background-attachment: none;
+}
+.red{
+    background: red;
 }
