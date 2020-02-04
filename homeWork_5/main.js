@@ -91,8 +91,7 @@ function numberLine() {
   }
 }
 
-let king = document.createElement("img");
-king.src ="img/king.jpg";
+
 
 
 
@@ -100,6 +99,13 @@ king.src ="img/king.jpg";
 function posision(){
 
   for(i=1; i<=8; i++){
+      // var arrFIG = ['','img/slon.jpg', 'img/horse.jpg', 'img/ladia.jpg',
+      //  'img/ferz.jpg', 'img/king.jpg', 'img/ladia.jpg', 'img/horse.jpg','img/slon.jpg'];
+
+      // let elem = document.createElement("img");
+      // elem.setAttribute("src", arrFIG[i]);
+      // document.querySelector("#horizontID_"+i+"1").innerHTML = arrFIG[0+i];
+      // document.querySelector("#horizontID_"+i+"1").appendChild(elem);
     let arrFIG = ["1",'Слон', 'Конь', 'Ладья', 'Ферзь', 'Король', 'Ладья', 'Конь', 'Слон'];
     let arrPeshka = ["1", "Пешка","Пешка","Пешка","Пешка","Пешка","Пешка","Пешка","Пешка"]
     document.querySelector("#horizontID_"+i+"1").innerHTML = arrFIG[0+i];
@@ -116,7 +122,7 @@ numberLine();
 posision();
 
 
-//  Тут перебор масиива со всеми ячейками и запуск функции для выделения зеленым цветом
+//  Тут перебор масива со всеми ячейками и запуск функции для выделения зеленым цветом
 for (let i = 0; i < arrQvadro.length; i++) {
   
 
@@ -203,30 +209,29 @@ function changeColorBlack(){
 
 
 
-let attention = document.querySelector("#table");
+// let attention = document.querySelector("#table");
 
-for (let i = 0; i < attention.length; i++){
-  attention.ondblclick = attentionRed;
+// for (let i = 0; i < attention.length; i++){
+//   attention.ondblclick = attentionRed;
+// }
+// function attentionRed(){
+//   attention.classList.add("red");
+// }
+
+
+let outLetter = document.querySelectorAll(".letterName");
+let outNumber = document.querySelectorAll(".NumberName");
+
+for (let i = 0; i < 8; i++) {
+  outNumber[i].ondblclick = changeColorOutNumb;
+  outLetter[i].ondblclick  = changeColorOut;
 }
-function attentionRed(){
-  attention.classList.add("red");
+
+
+
+function changeColorOut(){
+  this.className = (this.className == 'letterName' ? 'letterName red':'letterName');
 }
-
-
-// let outLetter = document.querySelectorAll(".letterName");
-// let outNumber = document.querySelectorAll(".NumberName");
-
-// for (let i = 0; i < 8; i++) {
-//   outNumber[i].ondblclick = changeColorOutNumb;
-//   outLetter[i].ondblclick  = changeColorOut;
-// }
-
-
-
-// function changeColorOut(){
-//   this.className = (this.className == 'letterName' ? 'letterName red':'letterName');
-// }
-
-// function changeColorOutNumb(){
-//   this.className = (this.className == 'NumberName' ? 'NumberName red':'NumberName');
-// }
+function changeColorOutNumb(){
+  this.className = (this.className == 'NumberName' ? 'NumberName red':'NumberName');
+}
