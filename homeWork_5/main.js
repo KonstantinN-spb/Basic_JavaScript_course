@@ -90,6 +90,13 @@ function numberLine() {
     
   }
 }
+
+let king = document.createElement("img");
+king.src ="img/king.jpg";
+
+
+
+
 function posision(){
 
   for(i=1; i<=8; i++){
@@ -109,14 +116,16 @@ numberLine();
 posision();
 
 
+//  Тут перебор масиива со всеми ячейками и запуск функции для выделения зеленым цветом
 for (let i = 0; i < arrQvadro.length; i++) {
-    
+  
+
 for(i=i;i<8;i++) {
     if (i%2 == 0){
-        arrQvadro[i].onclick = changeColorWhite;
+        arrQvadro[i].onclick = changeColorWhite; 
     }
     else{
-        arrQvadro[i].onclick = changeColorBlack;
+        arrQvadro[i].onclick = changeColorBlack; 
       } 
     } 
   for(i=i;i<16;i++) {
@@ -194,26 +203,30 @@ function changeColorBlack(){
 
 
 
+let attention = document.querySelector("#table");
 
-// outLetter.forEach(item =>{item.onclick = changeColorOut});
-// outLetter.onclick = changeColorOut;
-
-let outLetter = document.querySelectorAll(".letterName")
-
-for (let i = 0; i < outLetter.length; i++) {
-  outLetter[i].onclick = changeColorOut;
+for (let i = 0; i < attention.length; i++){
+  attention.ondblclick = attentionRed;
 }
-function changeColorOut(){
-  this.className = (this.className == 'letterName' ? 'letterName red':'letterName');
+function attentionRed(){
+  attention.classList.add("red");
 }
 
 
-let outNumber = document.querySelectorAll(".NumberName")
+// let outLetter = document.querySelectorAll(".letterName");
+// let outNumber = document.querySelectorAll(".NumberName");
 
-for (let i = 0; i < outNumber.length; i++) {
-  outNumber[i].onclick = changeColorOutNumb;
-}
+// for (let i = 0; i < 8; i++) {
+//   outNumber[i].ondblclick = changeColorOutNumb;
+//   outLetter[i].ondblclick  = changeColorOut;
+// }
 
-function changeColorOutNumb(){
-  this.className = (this.className == 'NumberName' ? 'NumberName red':'NumberName');
-}
+
+
+// function changeColorOut(){
+//   this.className = (this.className == 'letterName' ? 'letterName red':'letterName');
+// }
+
+// function changeColorOutNumb(){
+//   this.className = (this.className == 'NumberName' ? 'NumberName red':'NumberName');
+// }
