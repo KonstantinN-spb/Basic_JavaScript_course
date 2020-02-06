@@ -99,15 +99,9 @@ function numberLine() {
 function posision(){
 
   for(i=1; i<=8; i++){
-      // var arrFIG = ['','img/slon.jpg', 'img/horse.jpg', 'img/ladia.jpg',
-      //  'img/ferz.jpg', 'img/king.jpg', 'img/ladia.jpg', 'img/horse.jpg','img/slon.jpg'];
-
-      // let elem = document.createElement("img");
-      // elem.setAttribute("src", arrFIG[i]);
-      // document.querySelector("#horizontID_"+i+"1").innerHTML = arrFIG[0+i];
-      // document.querySelector("#horizontID_"+i+"1").appendChild(elem);
-    let arrFIG = ["1",'Слон', 'Конь', 'Ладья', 'Ферзь', 'Король', 'Ладья', 'Конь', 'Слон'];
-    let arrPeshka = ["1", "Пешка","Пешка","Пешка","Пешка","Пешка","Пешка","Пешка","Пешка"]
+    
+    let arrFIG = ["1",'&#9821', '&#9822', '&#9820', '&#9818', '&#9819', '&#9820', '&#9822', '&#9821'];
+    let arrPeshka = ["1", "&#9823","&#9823","&#9823","&#9823","&#9823","&#9823","&#9823","&#9823"]
     document.querySelector("#horizontID_"+i+"1").innerHTML = arrFIG[0+i];
     document.querySelector("#horizontID_"+i+"2").innerHTML = arrPeshka[0+i];
     document.querySelector("#horizontID_"+i+"7").innerHTML = arrPeshka[0+i];
@@ -195,7 +189,8 @@ for(i=i;i<8;i++) {
             arrQvadro[i].onclick = changeColorWhite;
       }  
                    
-    }              
+    } 
+  
 }
 
 function changeColorWhite(){
